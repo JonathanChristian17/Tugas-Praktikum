@@ -8,9 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class Mahasiswa extends Model
 {
     use HasFactory;
-    protected $table='mahasiswa';
+
+    protected $table = 'Mahasiswa';
     protected $primaryKey = 'id_mahasiswa';
+    public $timestamps = false;
+    protected $fillable = [
+        'nama',
+        'nim',
+        'jurusan',
+        'fakultas'
+    ];
+
     public function ktm(){
-        return $this->hasOne(Ktm::class, 'id_mahasiswa'); //hasone artinya si mahasiswa ada tabel di model ktm
+        return $this->hasOne(ktm::class, 'id_mahasiswa'); //hasMany untuk one to many
     }
 }
