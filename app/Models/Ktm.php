@@ -15,7 +15,5 @@ class Ktm extends Model
     public function mahasiswa(){
         return $this->belongsTo(Mahasiswa::class);
     }
-    public function dosen(){
-        return $this->belongsTo(Dosen::class);
-    }
+
 }

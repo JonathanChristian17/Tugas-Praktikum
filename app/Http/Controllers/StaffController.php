@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Dosen;
+use App\Models\Staff;
 use Illuminate\Http\Request;
 
-class DosenController extends Controller
+class StaffController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $dosen = Dosen::all();
-        return view('dosen',[
-            'dosen' => $dosen
+        $staff = Staff::all();
+        return view('staff',[
+            'staff' => $staff
         ]);
     }
 
